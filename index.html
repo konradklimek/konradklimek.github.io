@@ -4,160 +4,219 @@
     <meta charset="UTF-8">
     <title>Konrad Klimek – Strateg Marketingowy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Strateg marketingowy. Architektura marek, strategie rynkowe, branding, project management.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
-            background: #f9f9f9;
-            color: #222;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: #f5f5f5;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
+        }
+
+        /* HERO */
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
         }
 
         h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 60px;
-            font-size: 24px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 800;
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 300;
-            color: #666;
+            color: #bbbbbb;
+            margin-bottom: 30px;
         }
 
-        .section {
-            margin-top: 30px;
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background: #00c2ff;
+            margin: 30px 0;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #1f1f1f;
+            box-shadow: 0 0 40px rgba(0,194,255,0.15);
+        }
+
+        /* SEKCJE */
+
+        section {
+            margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section-line {
+            width: 40px;
+            height: 3px;
+            background: #00c2ff;
+            margin-bottom: 40px;
         }
 
         .job {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .job-title {
             font-weight: 600;
+            font-size: 18px;
         }
 
         .meta {
-            color: #777;
+            color: #888;
             font-size: 14px;
+            margin-bottom: 8px;
         }
 
         .skills span {
             display: inline-block;
-            background: #eaeaea;
-            padding: 8px 14px;
-            margin: 5px;
-            border-radius: 20px;
+            background: #1a1a1a;
+            padding: 10px 16px;
+            margin: 6px;
+            border-radius: 30px;
             font-size: 14px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 14px;
-            color: #666;
+            border: 1px solid #2a2a2a;
         }
 
         a {
-            color: #000;
+            color: #00c2ff;
             text-decoration: none;
-            font-weight: 500;
         }
 
         a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            margin-top: 120px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .accent-line {
+                margin: 30px auto;
+            }
+        }
+
     </style>
 </head>
-
 <body>
 
 <div class="container">
 
-    <h1>Konrad Klimek</h1>
-    <div class="subtitle">Strateg marketingowy</div>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Konrad Klimek</h1>
+            <div class="subtitle">Strateg marketingowy</div>
 
-    <div class="section">
-        <p>
-            Strateg marketingowy z doświadczeniem we współpracy ze szczeblem zarządczym.
-            Specjalizuję się w architekturze marek, strategiach rynkowych oraz wdrażaniu
-            procesów opartych na analizie danych i badaniach.
-        </p>
+            <div class="accent-line"></div>
+
+            <p>
+                Współpracuję ze szczeblem zarządczym, projektując strategie,
+                które przekładają się na realne decyzje biznesowe.
+                Łączę analizę danych, badania rynkowe i architekturę marek
+                z egzekucją projektową.
+            </p>
+        </div>
+
+        <div class="hero-image">
+            <!-- TU WSTAW SWOJE ZDJĘCIE -->
+            <img src="twoje-zdjecie.jpg" alt="Konrad Klimek">
+        </div>
     </div>
 
-    <h2>Doświadczenie</h2>
-
-    <div class="section">
+    <section>
+        <h2>Doświadczenie</h2>
+        <div class="section-line"></div>
 
         <div class="job">
-            <div class="job-title">Marketing Manager – ARKONA Laboratorium Farmakologii Stomatologicznej</div>
+            <div class="job-title">Marketing Manager – ARKONA</div>
             <div class="meta">2025–2026</div>
-            <p>Architektura marek, wdrożenie nowej marki produkcji kontraktowej, współpraca z działem sprzedaży.</p>
+            <p>Architektura marek, wdrożenie nowej marki produkcji kontraktowej, ścisła współpraca z działem sprzedaży.</p>
         </div>
 
         <div class="job">
             <div class="job-title">Strateg – Bluefox</div>
             <div class="meta">2018–2023</div>
-            <p>Opracowanie i realizacja kompleksowych strategii marketingowych dla firm prywatnych i JST.</p>
+            <p>Kompleksowe strategie marketingowe, badania, repozycjonowanie marek, strategie JST.</p>
         </div>
 
         <div class="job">
             <div class="job-title">Project Manager – Synergia</div>
             <div class="meta">2008–2021</div>
-            <p>Zarządzanie portfelem projektów marketingowych, budżety, harmonogramy, zespoły zewnętrzne.</p>
+            <p>Zarządzanie portfelem projektów, budżetami i zespołami interdyscyplinarnymi.</p>
         </div>
+    </section>
 
-    </div>
+    <section>
+        <h2>Kompetencje</h2>
+        <div class="section-line"></div>
 
-    <h2>Kluczowe kompetencje</h2>
+        <div class="skills">
+            <span>Analiza danych</span>
+            <span>Badania rynkowe</span>
+            <span>Branding</span>
+            <span>Architektura marek</span>
+            <span>Planowanie strategiczne</span>
+            <span>Project Management</span>
+        </div>
+    </section>
 
-    <div class="section skills">
-        <span>Analiza danych</span>
-        <span>Badania rynkowe</span>
-        <span>Branding</span>
-        <span>Planowanie strategiczne</span>
-        <span>Project management</span>
-        <span>Architektura marek</span>
-    </div>
+    <section>
+        <h2>Kontakt</h2>
+        <div class="section-line"></div>
 
-    <h2>Edukacja</h2>
-
-    <div class="section">
-        <p>MBA – Wyższa Szkoła Przedsiębiorczości i Administracji w Lublinie (2024–2025)</p>
-        <p>Chartered Institute of Marketing – Award in Strategic Marketing (2015–2016)</p>
-        <p>UMCS – Zarządzanie i Marketing / Socjologia</p>
-    </div>
-
-    <h2>Kontakt</h2>
-
-    <div class="section">
         <p>Email: <a href="mailto:konradkklimek@gmail.com">konradkklimek@gmail.com</a></p>
         <p>Tel: +48 513 098 033</p>
         <p><a href="https://www.linkedin.com/in/klimek-konrad/" target="_blank">LinkedIn</a></p>
-    </div>
+    </section>
 
     <footer>
-        © 2026 Konrad Klimek
-    </footer>
-
-</div>
-
-</body>
-</html>
+        © 202
