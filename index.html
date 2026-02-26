@@ -1,222 +1,265 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Konrad Klimek – Strateg Marketingowy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konrad Klimek – Strateg Marketingowy</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #0f0f0f;
-            color: #f5f5f5;
-            line-height: 1.6;
-        }
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 80px 20px;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0d0d;
+    color: #f1f1f1;
+    scroll-behavior: smooth;
+}
 
-        /* HERO */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
 
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
+/* NAV */
 
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
-        }
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13,13,13,0.95);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    z-index: 1000;
+}
 
-        h1 {
-            font-size: 48px;
-            margin: 0 0 10px 0;
-            font-weight: 800;
-        }
+.nav-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .subtitle {
-            font-size: 22px;
-            font-weight: 300;
-            color: #bbbbbb;
-            margin-bottom: 30px;
-        }
+.logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-        .accent-line {
-            width: 60px;
-            height: 4px;
-            background: #00c2ff;
-            margin: 30px 0;
-        }
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-        .hero-image {
-            flex: 1;
-            min-width: 280px;
-            display: flex;
-            justify-content: center;
-        }
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
 
-        .hero-image img {
-            width: 320px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 2px solid #1f1f1f;
-            box-shadow: 0 0 40px rgba(0,194,255,0.15);
-        }
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+}
 
-        /* SEKCJE */
+/* HERO */
 
-        section {
-            margin-top: 100px;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
-        h2 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+}
 
-        .section-line {
-            width: 40px;
-            height: 3px;
-            background: #00c2ff;
-            margin-bottom: 40px;
-        }
+.hero-text {
+    flex: 1;
+}
 
-        .job {
-            margin-bottom: 30px;
-        }
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 800;
+}
 
-        .job-title {
-            font-weight: 600;
-            font-size: 18px;
-        }
+.hero-text p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #aaa;
+}
 
-        .meta {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
+.accent {
+    width: 60px;
+    height: 4px;
+    background: #00c2ff;
+    margin: 30px 0;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #1a1a1a;
-            padding: 10px 16px;
-            margin: 6px;
-            border-radius: 30px;
-            font-size: 14px;
-            border: 1px solid #2a2a2a;
-        }
+.hero-image img {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0,194,255,0.2);
+}
 
-        a {
-            color: #00c2ff;
-            text-decoration: none;
-        }
+/* SEKCJE */
 
-        a:hover {
-            text-decoration: underline;
-        }
+section {
+    padding: 120px 0;
+}
 
-        footer {
-            margin-top: 120px;
-            padding-top: 30px;
-            border-top: 1px solid #222;
-            color: #777;
-            font-size: 14px;
-        }
+h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
 
-            .accent-line {
-                margin: 30px auto;
-            }
-        }
+.project-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    border: 1px solid #222;
+}
 
-    </style>
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00c2ff;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project-card span {
+    font-size: 14px;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
+<nav>
+<div class="nav-wrapper">
+<div class="logo">KK</div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="menu" id="menu">
+<a href="#projekty">Projekty</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+</div>
+</nav>
 
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Konrad Klimek</h1>
-            <div class="subtitle">Strateg marketingowy</div>
+<div class="container hero">
+<div class="hero-content">
 
-            <div class="accent-line"></div>
+<div class="hero-text">
+<h1>Konrad Klimek</h1>
+<div class="accent"></div>
+<p>
+Strateg marketingowy. Projektuję architekturę marek,
+strategie rynkowe i systemy zarządzania marketingiem,
+które przekładają się na realne decyzje zarządcze.
+</p>
+</div>
 
-            <p>
-                Współpracuję ze szczeblem zarządczym, projektując strategie,
-                które przekładają się na realne decyzje biznesowe.
-                Łączę analizę danych, badania rynkowe i architekturę marek
-                z egzekucją projektową.
-            </p>
-        </div>
+<div class="hero-image">
+<img src="twoje-zdjecie.jpg" alt="Konrad Klimek">
+</div>
 
-        <div class="hero-image">
-            <!-- TU WSTAW SWOJE ZDJĘCIE -->
-            <img src="KK_left.jpg" alt="Konrad Klimek">
-        </div>
-    </div>
+</div>
+</div>
 
-    <section>
-        <h2>Doświadczenie</h2>
-        <div class="section-line"></div>
+<section id="projekty" class="container">
+<h2>Wybrane projekty</h2>
 
-        <div class="job">
-            <div class="job-title">Marketing Manager – ARKONA</div>
-            <div class="meta">2025–2026</div>
-            <p>Architektura marek, wdrożenie nowej marki produkcji kontraktowej, ścisła współpraca z działem sprzedaży.</p>
-        </div>
+<div class="projects">
 
-        <div class="job">
-            <div class="job-title">Strateg – Bluefox</div>
-            <div class="meta">2018–2023</div>
-            <p>Kompleksowe strategie marketingowe, badania, repozycjonowanie marek, strategie JST.</p>
-        </div>
+<div class="project-card">
+<h3>Arkona ONE – strategia i launch marki</h3>
+<span>2025</span>
+</div>
 
-        <div class="job">
-            <div class="job-title">Project Manager – Synergia</div>
-            <div class="meta">2008–2021</div>
-            <p>Zarządzanie portfelem projektów, budżetami i zespołami interdyscyplinarnymi.</p>
-        </div>
-    </section>
+<div class="project-card">
+<h3>PPMB Niemce – architektura marek</h3>
+<span>2024</span>
+</div>
 
-    <section>
-        <h2>Kompetencje</h2>
-        <div class="section-line"></div>
+<div class="project-card">
+<h3>Strategia Rozwoju – Aglomeracja Rzeszowska</h3>
+<span>2022/2023</span>
+</div>
 
-        <div class="skills">
-            <span>Analiza danych</span>
-            <span>Badania rynkowe</span>
-            <span>Branding</span>
-            <span>Architektura marek</span>
-            <span>Planowanie strategiczne</span>
-            <span>Project Management</span>
-        </div>
-    </section>
+<div class="project-card">
+<h3>Selena Marketing International – architektura marek</h3>
+<span>2021/2022</span>
+</div>
 
-    <section>
-        <h2>Kontakt</h2>
-        <div class="section-line"></div>
+<div class="project-card">
+<h3>Mondial Assistance – badania neuromarketingowe</h3>
+<span>2019/2020</span>
+</div>
 
-        <p>Email: <a href="mailto:konradkklimek@gmail.com">konradkklimek@gmail.com</a></p>
-        <p>Tel: +48 513 098 033</p>
-        <p><a href="https://www.linkedin.com/in/klimek-konrad/" target="_blank">LinkedIn</a></p>
-    </section>
+<div class="project-card">
+<h3>Paprocki & Brzozowski – strategia marki Plants</h3>
+<span>2019/2020</span>
+</div>
 
-    <footer>
-        © 202
+</div>
+</section>
+
+<section id="kontakt" class="container">
+<h2>Kontakt</h2>
+<p>Email: <a href="mailto:konradkklimek@gmail.com">konradkklimek@gmail.com</a></p>
+<p>Tel: +48 513 098 033</p>
+<p><a href="https://www.linkedin.com/in/klimek-konrad/" target="_blank">LinkedIn</a></p>
+</section>
+
+<footer>
+© 2026 Konrad Klimek
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
